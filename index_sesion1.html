@@ -22,23 +22,33 @@
                 </button>
                     
                 
-                <div id="div4">
-                    <p id="p1">usuario: <input type="text" class="input-failed" requerid></p>
-                    <p id="p1">Contraseña: <input type="password"></p>
-                    <p id="p1"></p>
-                    <table>
-                        <th>
-                            <button onclick="window.location.href='index_sesion1.html';">
-                                Cancelar
+                <div id="div4" id="loginForm">
+                    <form id="loginForm">
+                        <br>
+                        <br>
+                        <br>
+                        <label for="loginUsername">Usuario:</label>
+                        <input type="text" id="loginUsername" required>
+                        <br>
+                        <br>
+                        <br>
+                        <label for="loginPassword">Contraseña:</label>
+                        <input type="password" id="loginPassword" required>
+                        <br>
+                        <br><br><br>
+                        <div id="display-flex1">
+                            <button onclick="window.location.href='index.html';">
+                                Regresar
                             </button>
-                        </th>
-                        <th>
-                            <button onclick="window.location.href='index_sesion1.html';">
-                                Enviar
+                            <button type="submit">
+                                Iniciar Sesión
                             </button>
-                        </th>
-                    </table>
+                        </div>
+                    </form>
+                    <p id="loginMessage"></p>
+                    <script src="login.js"></script>
                 </div>
+                
 
             </div>
         </center>
