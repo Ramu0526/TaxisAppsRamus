@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+  <title>Teletaxis</title>
+  <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+  <!-- Sección de inicio -->
+  <div class="container" id="inicio">
+    <h1 class="title">Teletaxis</h1>
+    <p>Bienvenido señor usuario, ¿qué deseas?</p>
+    <button class="button" formnovalidate onclick="document.getElementById('iniciar-sesion').style.display = 'block'; document.getElementById('inicio').style.display = 'none'">Iniciar sesion</button>
+    <button class="button" formnovalidate onclick="document.getElementById('registrarse').style.display = 'block'; document.getElementById('inicio').style.display = 'none'">Registrarse</button>
+    <button class="button" formnovalidate onclick="document.getElementById('seleccionar-tipo-cliente').style.display = 'block'; document.getElementById('inicio').style.display = 'none'">Seleccionar tipo de cliente</button>
+    <button class="button" formnovalidate onclick="document.getElementById('pasajero').style.display = 'block'; document.getElementById('inicio').style.display = 'none'">Pasajero</button>
+    <button class="button" formnovalidate onclick="document.getElementById('conductor').style.display = 'block'; document.getElementById('inicio').style.display = 'none'">Conductor</button>
+  </div>
+
+  <!-- Sección de inicio de sesión -->
+  <div class="container" id="iniciar-sesion" style="display: none;">
+    <h2>Seleccionar</h2>
+    <div class="selection-buttons">
+      <button>Gmail</button>
+      <button>Teléfono</button>
+    </div>
+    <label for="usuario">Usuario:</label>
+    <input type="text" id="usuario" name="usuario" required>
+    <label for="contraseña">Contraseña:</label>
+    <input type="password" id="contraseña" name="contraseña" required>
+    <div class="button-group">
+      <button type="button" formnovalidate onclick="document.getElementById('iniciar-sesion').style.display = 'none'; document.getElementById('inicio').style.display = 'block'">Volver</button>
+      <button type="submit" form="iniciar-sesion-form">Enviar</button>
+    </div>
+    <form id="iniciar-sesion-form" action="#">
+      <!-- form fields -->
+    </form>
+  </div>
+
+  <!-- Sección de registro -->
+  <div class="container" id="registrarse" style="display: none;">
+    <h2>Registrarse</h2>
+    <form id="registrarse-form" action="#">
+      <div class="form-group">
+        <label for="correo">Correo:</label>
+        <input type="email" id="correo" name="correo" required>
+      </div>
+      <div class="form-group">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+      </div>
+      <div class="form-group">
+        <label for="apellido">Apellido:</label>
+        <input type="text" id="apellido" name="apellido" required>
+      </div>
+      <div class="form-group">
+        <label for="telefono">Telefono:</label>
+        <input type="tel" id="telefono" name="telefono" required>
+      </div>
+      <div class="form-group">
+        <label for="usuario">Usuario:</label>
+        <input type="text" id="usuario" name="usuario" required>
+      </div>
+      <div class="form-group">
+        <label for="contraseña">Contraseña:</label>
+        <input type="password" id="contraseña" name="contraseña" required>
+      </div>
+      <div class="form-group">
+        <label for="confirmar_contraseña">Confirmar contraseña:</label>
+        <input type="password" id="confirmar_contraseña" name="confirmar_contraseña" required>
+      </div>
+      <button type="submit">Registrarse</button>
+    </form>
+    <a href="#" class="volver" onclick="document.getElementById('registrarse').style.display = 'none'; document.getElementById('inicio').style.display = 'block'">Volver</a>
+  </div>
+
+  <!-- Sección de selección de tipo de cliente -->
+  <div class="container" id="seleccionar-tipo-cliente" style="display: none;">
+    <h2>Selecciona el tipo de cliente</h2>
+    <div class="selection-buttons">
+      <button class="button" formnovalidate onclick="document.getElementById('pasajero').style.display = 'block'; document.getElementById('seleccionar-tipo-cliente').style.display = 'none'">Pasajero</button>
+      <button class="button" formnovalidate onclick="document.getElementById('conductor').style.display = 'block'; document.getElementById('seleccionar-tipo-cliente').style.display = 'none'">Conductor</button>
+    </div>
+    <button class="button" formnovalidate onclick="document.getElementById('seleccionar-tipo-cliente').style.display = 'none'; document.getElementById('inicio').style.display = 'block'">Volver</button>
+  </div>
+
+  <!-- Sección de pasajero -->
+  <div class="container" id="pasajero" style="display: none;">
+    <h2>Selecciona señor pasajero</h2>
+    <div class="selection-buttons">
+      <button>Iniciar pedido</button>
+      <button>Restaurar pedido</button>
+      <button>Consultar pedido</button>
+      <button>Cancelar pedido
+               Iniciar sesion </button>
+      <button formnovalidate onclick="document.getElementById('pasajero').style.display = 'none'; document.getElementById('inicio').style.display = 'block'">Volver</button>
+    </div>
+  </div>
+
+  <!-- Sección de conductor -->
+  <div class="container" id="conductor" style="display: none;">
+    <h2>Sistema de pedidos</h2>
+    <div class="selection-buttons">
+      <button>Aceptar pedido</button>
+      <button>Consultar pedido</button>
+      <button>Cancelar pedido</button>
+      <button formnovalidate onclick="document.getElementById('conductor').style.display = 'none'; document.getElementById('inicio').style.display = 'block'">Volver</button>
+    </div>
+  </div>
+</body>
+</html>
