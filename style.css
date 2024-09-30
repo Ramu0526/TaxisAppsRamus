@@ -1,111 +1,153 @@
 body {
-    background-image: url('https://img.freepik.com/vector-premium/tarjeta-visita-servicio-taxi-espacio-blanco-inscripciones-numero-telefono_711966-700.jpg');
-    background-size: cover;
-    background-color: #ffcc00;
-    font-family: sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+  background-image: url('https://img.freepik.com/vector-premium/tarjeta-visita-servicio-taxi-espacio-blanco-inscripciones-numero-telefono_711966-700.jpg');
+  background-size: cover;
+  background-color: #ffcc00;
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.contenedor {
+  width: 400px;
+  margin: 0 auto;
+  background-color: #ffff00;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+p {
+  text-align: center;
+  color: #333;
+}
+
+.grupo-de-formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.grupo-de-formulario input[type="text"],
+.grupo-de-formulario input[type="password"],
+.grupo-de-formulario input[type="email"],
+.grupo-de-formulario input[type="tel"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus {
+  border-color: #ff9900;
+  box-shadow: 0 0 5px rgba(255, 153, 0, 0.5);
+  outline: none;
+}
+
+button {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  background-color: #ffcc00;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #e6b800;
+}
+
+button:active {
+  background-color: #cc9900;
+}
+
+.grupo-de-botones {
+  display: flex;
+  justify-content: space-between;
+}
+
+.botones-de-seleccion {
+  margin-bottom: 20px;
+  width: 100%;
+  background-color: #FFCC00;
+  color: #000000;
+  border: none;
+  padding: 15px 30px;
+  margin: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.volver {
+  color: #000000;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #ffcc00;
+  cursor: pointer;
+  float: left;
+}
+
+/* Estilo para los formularios de calificación */
+.formulario-calificacion {
+  background-color: #ffff00;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.formulario-calificacion h2 {
+  text-align: center;
+}
+
+.formulario-calificacion label {
+  display: block;
+  margin: 10px 0 5px;
+}
+
+.formulario-calificacion input,
+.formulario-calificacion textarea,
+.formulario-calificacion select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.formulario-calificacion button {
+  width: 100%;
+  padding: 10px;
+  background-color: #ffcc00;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.formulario-calificacion button:hover {
+  background-color: #e6b800;
+}
+
+@media screen and (max-width: 660px) {
+  body {
+    background-image: url('https://img.freepik.com/vector-premium/tarjeta-visita-servicio-taxi-espacio-blanco-inscripciones-numero-telefono_711966-700.jpg/600x301');
   }
-  
-  
-  .contenedor {
-    width: 400px;
-    margin: 0 auto;
-    background-color: #ffff00;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-  }
-  
-  
-  h2 {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  
-  .grupo-de-formulario {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 15px;
-  }
-  
-  .grupo-de-formulario {
-    margin-bottom: 5px;
-  }
-  
-  
-  input[type="text"],
-  input[type="password"],
-  input[type="email"],
-  input[type="tel"] {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-sizing: border-box;
-  }
-  
-  
-  button {
-    display: block;
-    width: 100%;
-    padding: 15px;
-    background-color: #ffcc00;
-    border: none;
-    border-radius: 5px;
-    margin-bottom: 15px;
-    cursor: pointer;
-    font-size: 18px;
-  }
-  
-  
-  .grupo-de-botones {
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .botones-de-seleccion {
-    margin-bottom: 20px;
-  }
-  
-  .botones-de-seleccion  {
-    width: 100%;
-    background-color: #FFCC00;
-    color: #000000;
-    border: none;
-    padding: 15px 30px;
-    margin: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .botones-de-seleccion  {
-    background-color: #F7CC00;
-  }
-  
-  
-  .volver {
-    color: #000000;
-    text-decoration: none;
-    padding: 10px;
-    border-radius: 5px;
-    background-color: #ffcc00;
-    cursor: pointer;
-    float: left;
-  }
-  
-  .volver:hover {
-    background-color: #F7CC00;
-  }
-  
-  @media screen and (max-width: 660px) {
-    body {
-      background-image: url('https://img.freepik.com/vector-premium/tarjeta-visita-servicio-taxi-espacio-blanco-inscripciones-numero-telefono_711966-700.jpg/600x301');
-    }
-  }
-  
+}
