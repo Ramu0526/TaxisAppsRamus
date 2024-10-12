@@ -1,123 +1,209 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Teletaxis</title>
-  <link rel="stylesheet" href="Style.css">
+    <title>Teletaxis</title>
+    <link rel="stylesheet" href="Style.css">
 </head>
 <body>
-
-  <!-- Inicio -->
-  <div class="container" id="inicio">
-    <h1 class="title">Teletaxis</h1>
-    <p>Bienvenido señor usuario que deseas</p>
-    <button class="button" formnovalidate onclick="document.getElementById('iniciar-sesion').style.display = 'block'; document.getElementById('inicio').style.display = 'none'">Iniciar sesion</button>
-    <button class="button" formnovalidate onclick="document.getElementById('registrarse').style.display = 'block'; document.getElementById('inicio').style.display = 'none'">Registrarse</button>
-  </div>
-
-  <!-- Iniciar sesión -->
-  <div class="container" id="iniciar-sesion" style="display: none;">
-    <h2>Seleccionar</h2>
-    <div class="selection-buttons">
-      <button>Gmail</button>
-      <button>Telefono</button>
+    <!-- Inicio -->
+    <div class="container" id="inicio">
+        <h1 class="title">Teletaxis</h1>
+        <p>Bienvenido señor usuario que deseas</p>
+        <button class="button" formnovalidate onclick="document.getElementById('iniciar-sesion').style.display = 'block'; document.getElementById('inicio').style.display = 'none'">Iniciar sesion</button>
+        <button class="button" formnovalidate onclick="document.getElementById('registrarse').style.display = 'block'; document.getElementById('inicio').style.display = 'none'">Registrarse</button>
+        <button class="button" formnovalidate onclick="document.getElementById('calificacion1').style.display = 'block'; document.getElementById('inicio').style.display = 'none'">Calificacion de servicio</button>
+        <button class="button" formnovalidate onclick="document.getElementById('calificacion2').style.display = 'block'; document.getElementById('inicio').style.display = 'none'">Calificacion del conductor</button>
+        <button class="button" formnovalidate onclick="document.getElementById('calificacion3').style.display = 'block'; document.getElementById('inicio').style.display = 'none'">Calificacion de la APP</button>
+        <button class="button" formnovalidate onclick="document.getElementById('feliz-navidad').style.display = 'block'; document.getElementById('inicio').style.display = 'none'">Feliz Navidad!</button>
     </div>
-    <label for="usuario">Usuario:</label>
-    <input type="text" id="usuario" name="usuario" required>
-    <label for="contraseña">Contraseña:</label>
-    <input type="password" id="contraseña" name="contraseña" required>
-    <div class="button-group">
-      <button type="submit" form="iniciar-sesion-form" onclick="document.getElementById('iniciar-sesion').style.display = 'none'; document.getElementById('seleccionar-tipo-cliente').style.display = 'block'">Enviar</button>
-      <div class="volver">
-        <button type="button" formnovalidate onclick="document.getElementById('iniciar-sesion').style.display = 'none'; document.getElementById('inicio').style.display = 'block'">Volver</button>
-      </div>
-    </div>
-    <form id="iniciar-sesion-form" action="#">
-    </form>
-  </div>
 
-  <!-- Registrarse -->
-  <div class="container" id="registrarse" style="display: none;">
-    <h2>Registrarse</h2>
-    <form id="registrarse-form" action="#">
-      <div class="form-group">
-        <label for="correo">Correo:</label>
-        <input type="email" id="correo" name="correo" required>
-      </div>
-      <div class="form-group">
-        <label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" name="nombre" required>
-      </div>
-      <div class="form-group">
-        <label for="apellido">Apellido:</label>
-        <input type="text" id="apellido" name="apellido" required>
-      </div>
-      <div class="form-group">
-        <label for="telefono">Telefono:</label>
-        <input type="tel" id="telefono" name="telefono" required>
-      </div>
-      <div class="form-group">
+   
+     <!-- Contenido de Feliz Navidad -->
+     <div class="container navidad-container" id="feliz-navidad">
+        <h2>Feliz Navidad</h2>
+        <p class="navidad-texto">Que esta Navidad este llena de alegria y felicidad.</p>
+        <div class="snowflake"></div>
+        <div class="snowflake"></div>
+        <div class="snowflake"></div>
+        <div class="snowflake"></div>
+        <div class="snowflake"></div>
+        <div class="snowflake"></div>
+        <div class="snowflake"></div>
+        <div class="snowflake"></div>
+        <div class="snowflake"></div>
+        <div class="snowflake"></div>
+        <div class="snowflake"></div>
+        <div class="snowflake"></div>
+        <div class="snowflake"></div>
+        <div class="snowflake"></div>
+        <div class="snowflake"></div>
+        <div class="snowflake"></div>
+        <div class="snowflake"></div>
+        <div class="snowflake"></div>
+        <div class="snowflake"></div>
+        <div class="snowflake"></div>        
+    </div>
+
+
+    
+    <!-- Iniciar sesión -->
+    <div class="container" id="iniciar-sesion" style="display: none;">
+        <h2>Seleccionar</h2>
+        <div class="selection-buttons">
+            <button>Gmail</button>
+            <button>Telefono</button>
+        </div>
         <label for="usuario">Usuario:</label>
         <input type="text" id="usuario" name="usuario" required>
-      </div>
-      <div class="form-group">
         <label for="contraseña">Contraseña:</label>
         <input type="password" id="contraseña" name="contraseña" required>
-      </div>
-      <div class="form-group">
-        <label for="confirmar_contraseña">Confirmar contraseña:</label>
-        <input type="password" id="confirmar_contraseña" name="confirmar_contraseña" required>
-      </div>
-      <button type="submit" form="registrarse-form" 
-              onclick="document.getElementById('registrarse').style.display = 'none'; 
-                       document.getElementById('seleccionar-tipo-cliente').style.display = 'block'">
-        Registrarse
-      </button>
-      <div class="volver">
-        <button type="button" formnovalidate onclick="document.getElementById('registrarse').style.display = 'none'; document.getElementById('inicio').style.display = 'block'">Volver</button>
-      </div>
-    </form>
-  </div>
-
-  <!-- Seleccionar tipo de cliente -->
-  <div class="container" id="seleccionar-tipo-cliente" style="display: none;">
-    <h2>Selecciona el tipo de cliente</h2>
-    <div class="selection-buttons">
-      <button class="button" formnovalidate onclick="document.getElementById('pasajero').style.display = 'block'; document.getElementById('seleccionar-tipo-cliente').style.display = 'none'">Pasajero</button>
-      <button class="button" formnovalidate onclick="document.getElementById('conductor').style.display = 'block'; document.getElementById('seleccionar-tipo-cliente').style.display = 'none'">Conductor</button>
+        <div class="button-group">
+            <button type="submit" form="iniciar-sesion-form" onclick="document.getElementById('iniciar-sesion').style.display = 'none'; document.getElementById('seleccionar-tipo-cliente').style.display = 'block'">Enviar</button>
+            <div class="volver">
+                <button type="button" formnovalidate onclick="document.getElementById('iniciar-sesion').style.display = 'none'; document.getElementById('inicio').style.display = 'block'">Volver</button>
+            </div>
+        </div>
+        <form id="iniciar-sesion-form" action="#"></form>
     </div>
-    <br><br>
-    <div class="volver">
-      <button class="button" formnovalidate onclick="document.getElementById('seleccionar-tipo-cliente').style.display = 'none'; document.getElementById('registrarse').style.display = 'block'">Volver</button>
-    </div>
-  </div>
 
-  <!-- Pasajero -->
-  <div class="container" id="pasajero" style="display: none;">
-    <h2>Selecciona señor pasajero</h2>
-    <div class="selection-buttons">
-      <button>Iniciar pedido</button>
-      <button>Restaurar pedido</button>
-      <button>Consultar pedido</button>
-      <button>Cancelar pedido
-               Iniciar sesion</button>
-      <div class="volver">
-        <button formnovalidate onclick="document.getElementById('pasajero').style.display = 'none'; document.getElementById('seleccionar-tipo-cliente').style.display = 'block'">Volver</button>
-      </div>
+    <!-- Registrarse -->
+    <div class="container" id="registrarse" style="display: none;">
+        <h2>Registrarse</h2>
+        <form id="registrarse-form" action="#">
+            <div class="grupo-de-formulario">
+                <div class="form-group">
+                    <label for="correo">Correo:</label>
+                    <input type="email" id="correo" name="correo" required>
+                </div>
+                <div class="form-group">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+                <div class="form-group">
+                    <label for="apellido">Apellido:</label>
+                    <input type="text" id="apellido" name="apellido" required>
+                </div>
+                <div class="form-group">
+                    <label for="telefono">Teléfono:</label>
+                    <input type="tel" id="telefono" name="telefono" required>
+                </div>
+                <div class="form-group">
+                    <label for="usuario">Usuario:</label>
+                    <input type="text" id="usuario" name="usuario" required>
+                </div>
+                <div class="form-group">
+                    <label for="contraseña">Contraseña:</label>
+                    <input type="password" id="contraseña" name="contraseña" required>
+                </div>
+                <div class="form-group">
+                    <label for="confirmar_contraseña">Confirmar contraseña:</label>
+                    <input type="password" id="confirmar_contraseña" name="confirmar_contraseña" required>
+                </div>
+            </div>
+            <button type="submit" form="registrarse-form">Registrarse</button>
+            <div class="volver">
+                <button type="button" formnovalidate onclick="document.getElementById('registrarse').style.display = 'none'; document.getElementById('inicio').style.display = 'block'">Volver</button>
+            </div>
+        </form>
     </div>
-  </div>
 
-  <!-- Conductorn -->
-  <div class="container" id="conductor" style="display: none;">
-    <h2>Sistema de pedidos</h2>
-    <div class="selection-buttons">
-      <button>Aceptar pedido</button>
-      <button>Consultar pedido</button>
-      <button>Cancelar pedido</button>
-      <div class="volver">
-        <button formnovalidate onclick="document.getElementById('conductor').style.display = 'none'; document.getElementById('seleccionar-tipo-cliente').style.display = 'block'">Volver</button>
-      </div>
+    <!-- Seleccionar tipo de cliente -->
+    <div class="container" id="seleccionar-tipo-cliente" style="display: none;">
+        <h2>Selecciona el tipo de cliente</h2>
+        <div class="selection-buttons">
+            <button class="button" formnovalidate onclick="document.getElementById('pasajero').style.display = 'block'; document.getElementById('seleccionar-tipo-cliente').style.display = 'none'">Pasajero</button>
+            <button class="button" formnovalidate onclick="document.getElementById('conductor').style.display = 'block'; document.getElementById('seleccionar-tipo-cliente').style.display = 'none'">Conductor</button>
+        </div>
+        <br><br>
+        <div class="volver">
+            <button class="button" formnovalidate onclick="document.getElementById('seleccionar-tipo-cliente').style.display = 'none'; document.getElementById('iniciar-sesion').style.display = 'block'">Volver</button>
+        </div>
     </div>
-  </div>
 
+    <!-- Pasajero -->
+    <div class="container" id="pasajero" style="display: none;">
+        <h2>Selecciona señor pasajero</h2>
+        <div class="selection-buttons">
+            <button>Iniciar pedido</button>
+            <button>Restaurar pedido</button>
+            <button>Consultar pedido</button>
+            <button>Cancelar pedido</button>
+            <div class="volver">
+                <button formnovalidate onclick="document.getElementById('pasajero').style.display = 'none'; document.getElementById('seleccionar-tipo-cliente').style.display = 'block'">Volver</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Conductor -->
+    <div class="container" id="conductor" style="display: none;">
+        <h2>Sistema de pedidos</h2>
+        <div class="selection-buttons">
+            <button>Aceptar pedido</button>
+            <button>Consultar pedido</button>
+            <button>Cancelar pedido</button>
+            <div class="volver">
+                <button formnovalidate onclick="document.getElementById('conductor').style.display = 'none'; document.getElementById('seleccionar-tipo-cliente').style.display = 'block'">Volver</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id="calificacion1" style="display: none;">
+        <form class="formulario-calificacion" action="submit_calificacion_servicio" method="POST" target="_blank">
+            <h2>Calificacion de Servicio</h2>
+            <label for="nombre_servicio">Nombre:</label>
+            <input type="text" id="nombre_servicio" name="nombre_servicio" required>
+            <label for="email_servicio">Correo Electronico:</label>
+            <input type="email" id="email_servicio" name="email_servicio" required>
+            <label for="comentarios_servicio">Comentarios:</label>
+            <textarea id="comentarios_servicio" name="comentarios_servicio" rows="4" required></textarea>
+            <label for="calificacion_servicio">Calificacion:</label>
+            <input type="range" id="calificacion_servicio" name="calificacion_servicio" min="1" max="10" required>
+            <button type="submit">Enviar</button>
+            <div class="volver">
+                <button type="button" formnovalidate onclick="document.getElementById('calificacion1').style.display = 'none'; document.getElementById('inicio').style.display = 'block'">Volver</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="container" id="calificacion2" style="display: none;">
+        <form class="formulario-calificacion" action="submit_calificacion_conductor" method="POST" target="_blank">
+            <h2>Calificacion de Conductor</h2>
+            <label for="nombre_conductor">Nombre del Conductor:</label>
+            <input type="text" id="nombre_conductor" name="nombre_conductor" required>
+            <label for="email_conductor">Correo Electronico:</label>
+            <input type="email" id="email_conductor" name="email_conductor" required>
+            <label for="comentarios_conductor">Comentarios:</label>
+            <textarea id="comentarios_conductor" name="comentarios_conductor" rows="4" required></textarea>
+            <label for="calificacion_conductor">Calificacion:</label>
+            <select id="calificacion_conductor" name="calificacion_conductor" required>
+                <option value="excelente">Excelente</option>
+                <option value="bueno">Bueno</option>
+                <option value="regular">Regular</option>
+                <option value="malo">Malo</option>
+            </select>
+            <button type="submit">Enviar</button>
+        </form>
+        <div class="volver">
+            <button type="button" formnovalidate onclick="document.getElementById('calificacion2').style.display = 'none'; document.getElementById('inicio').style.display = 'block'">Volver</button>
+        </div>
+    </div>
+
+    <div class="container" id="calificacion3" style="display: none;">
+        <form class="formulario-calificacion" action="submit_calificacion_aplicacion" method="POST" target="_blank">
+            <h2>Calificacion de la Aplicacion</h2>
+            <label for="nombre_aplicacion">Nombre:</label>
+            <input type="text" id="nombre_aplicacion" name="nombre_aplicacion" required>
+            <label for="email_aplicacion">Correo Electronico:</label>
+            <input type="email" id="email_aplicacion" name="email_aplicacion" required>
+            <label for="comentarios_aplicacion">Comentarios:</label>
+            <textarea id="comentarios_aplicacion" name="comentarios_aplicacion" rows="4" required></textarea>
+            <label for="satisfaccion_aplicacion">Satisfaccion:</label>
+            <meter id="satisfaccion_aplicacion" name="satisfaccion_aplicacion" min="0" max="100" value="75"></meter>
+            <button type="submit">Enviar</button>
+            <div class="volver">
+                <button type="button" formnovalidate onclick="document.getElementById('calificacion3').style.display = 'none'; document.getElementById('inicio').style.display = 'block'">Volver</button>
+            </div>
+        </form>
+    </div>
 </body>
 </html>
