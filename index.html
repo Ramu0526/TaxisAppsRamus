@@ -1,289 +1,209 @@
-body {
-  background-image: url('https://img.freepik.com/vector-premium/tarjeta-visita-servicio-taxi-espacio-blanco-inscripciones-numero-telefono_711966-700.jpg');
-  background-size: cover;
-  background-color: #ffcc00;
-  font-family: sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  transition: background-color 0.3s ease-in-out;
-}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Teletaxis</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+    <!-- Inicio -->
+    <div class="container" id="inicio">
+        <h1 class="title">Teletaxis</h1>
+        <p>Bienvenido señor usuario que deseas</p>
+        <button class="button" formnovalidate onclick="document.getElementById('iniciar-sesion').style.display = 'block'; document.getElementById('inicio').style.display = 'none'">Iniciar sesion</button>
+        <button class="button" formnovalidate onclick="document.getElementById('registrarse').style.display = 'block'; document.getElementById('inicio').style.display = 'none'">Registrarse</button>
+        <button class="button" formnovalidate onclick="document.getElementById('calificacion1').style.display = 'block'; document.getElementById('inicio').style.display = 'none'">Calificacion de servicio</button>
+        <button class="button" formnovalidate onclick="document.getElementById('calificacion2').style.display = 'block'; document.getElementById('inicio').style.display = 'none'">Calificacion del conductor</button>
+        <button class="button" formnovalidate onclick="document.getElementById('calificacion3').style.display = 'block'; document.getElementById('inicio').style.display = 'none'">Calificacion de la APP</button>
+        <button class="button" formnovalidate onclick="document.getElementById('feliz-navidad').style.display = 'block'; document.getElementById('inicio').style.display = 'none'">Feliz Navidad!</button>
+    </div>
 
-.contenedor {
-  width: 400px;
-  margin: 0 auto;
-  background-color: #ffff00;
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  display: flex;
-  flex-direction: column;
-  transition: transform 0.3s ease-in-out;
-}
-
-.contenedor:hover {
-  transform: scale(1.05);
-}
-
-h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  transition: color 0.3s ease-in-out;
-}
-
-h2:hover {
-  color: #ff9900;
-}
-
-p {
-  text-align: center;
-  color: #333;
-}
-
-.grupo-de-formulario {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.grupo-de-formulario input[type="text"],
-.grupo-de-formulario input[type="password"],
-.grupo-de-formulario input[type="email"],
-.grupo-de-formulario input[type="tel"] {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ffff00;
-  border-radius: 5px;
-  box-sizing: border-box;
-  transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
-
-input[type="text"]:focus,
-input[type="password"]:focus,
-input[type="email"]:focus,
-input[type="tel"]:focus {
-  border-color: #ff9900;
-  box-shadow: 0 0 5px rgba(255, 153, 0, 0.5);
-  outline: none;
-}
-
-button {
-  display: block;
-  width: 100%;
-  padding: 15px;
-  background-color: #ffcc00;
-  border: none;
-  border-radius: 5px;
-  margin-bottom: 15px;
-  cursor: pointer;
-  font-size: 18px;
-  transition: background-color 0.3s ease-in-out;
-}
-
-button:hover {
-  background-color: #e6b800;
-}
-
-button:active {
-  background-color: #cc9900;
-}
-
-.grupo-de-botones {
-  display: flex;
-  justify-content: space-between;
-}
-
-.botones-de-seleccion {
-  margin-bottom: 20px;
-  width: 100%;
-  background-color: #FFCC00;
-  color: #000000;
-  border: none;
-  padding: 15px 30px;
-  margin: 10px;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease-in-out;
-}
-
-.botones-de-seleccion:hover {
-  background-color: #e6b800;
-}
-
-.volver {
-  color: #000000;
-  text-decoration: none;
-  padding: 10px;
-  border-radius: 5px;
-  background-color: #ffcc00;
-  cursor: pointer;
-  float: left;
-}
-
-.volver:hover {
-  background-color: #e6b800;
-}
+   
+     <!-- Contenido de Feliz Navidad -->
+     <div class="container navidad-container" id="feliz-navidad">
+        <h2>Feliz Navidad</h2>
+        <p class="navidad-texto">Que esta Navidad este llena de alegria y felicidad.</p>
+        <div class="snowflake"></div>
+        <div class="snowflake"></div>
+        <div class="snowflake"></div>
+        <div class="snowflake"></div>
+        <div class="snowflake"></div>
+        <div class="snowflake"></div>
+        <div class="snowflake"></div>
+        <div class="snowflake"></div>
+        <div class="snowflake"></div>
+        <div class="snowflake"></div>
+        <div class="snowflake"></div>
+        <div class="snowflake"></div>
+        <div class="snowflake"></div>
+        <div class="snowflake"></div>
+        <div class="snowflake"></div>
+        <div class="snowflake"></div>
+        <div class="snowflake"></div>
+        <div class="snowflake"></div>
+        <div class="snowflake"></div>
+        <div class="snowflake"></div>        
+    </div>
 
 
-.formulario-calificacion {
-  background-color: #ffff00;
-  padding: 20px;
-  border-radius: 10px;
-  margin-top: 20px;
-  transition: background-color 0.3s ease-in-out;
-}
+    
+    <!-- Iniciar sesión -->
+    <div class="container" id="iniciar-sesion" style="display: none;">
+        <h2>Seleccionar</h2>
+        <div class="selection-buttons">
+            <button>Gmail</button>
+            <button>Telefono</button>
+        </div>
+        <label for="usuario">Usuario:</label>
+        <input type="text" id="usuario" name="usuario" required>
+        <label for="contraseña">Contraseña:</label>
+        <input type="password" id="contraseña" name="contraseña" required>
+        <div class="button-group">
+            <button type="submit" form="iniciar-sesion-form" onclick="document.getElementById('iniciar-sesion').style.display = 'none'; document.getElementById('seleccionar-tipo-cliente').style.display = 'block'">Enviar</button>
+            <div class="volver">
+                <button type="button" formnovalidate onclick="document.getElementById('iniciar-sesion').style.display = 'none'; document.getElementById('inicio').style.display = 'block'">Volver</button>
+            </div>
+        </div>
+        <form id="iniciar-sesion-form" action="#"></form>
+    </div>
 
-.formulario-calificacion:hover {
-  background-color: #ffff00;
-}
+    <!-- Registrarse -->
+    <div class="container" id="registrarse" style="display: none;">
+        <h2>Registrarse</h2>
+        <form id="registrarse-form" action="#">
+            <div class="grupo-de-formulario">
+                <div class="form-group">
+                    <label for="correo">Correo:</label>
+                    <input type="email" id="correo" name="correo" required>
+                </div>
+                <div class="form-group">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+                <div class="form-group">
+                    <label for="apellido">Apellido:</label>
+                    <input type="text" id="apellido" name="apellido" required>
+                </div>
+                <div class="form-group">
+                    <label for="telefono">Teléfono:</label>
+                    <input type="tel" id="telefono" name="telefono" required>
+                </div>
+                <div class="form-group">
+                    <label for="usuario">Usuario:</label>
+                    <input type="text" id="usuario" name="usuario" required>
+                </div>
+                <div class="form-group">
+                    <label for="contraseña">Contraseña:</label>
+                    <input type="password" id="contraseña" name="contraseña" required>
+                </div>
+                <div class="form-group">
+                    <label for="confirmar_contraseña">Confirmar contraseña:</label>
+                    <input type="password" id="confirmar_contraseña" name="confirmar_contraseña" required>
+                </div>
+            </div>
+            <button type="submit" form="registrarse-form">Registrarse</button>
+            <div class="volver">
+                <button type="button" formnovalidate onclick="document.getElementById('registrarse').style.display = 'none'; document.getElementById('inicio').style.display = 'block'">Volver</button>
+            </div>
+        </form>
+    </div>
 
-.formulario-calificacion h2 {
-  text-align: center;
-}
+    <!-- Seleccionar tipo de cliente -->
+    <div class="container" id="seleccionar-tipo-cliente" style="display: none;">
+        <h2>Selecciona el tipo de cliente</h2>
+        <div class="selection-buttons">
+            <button class="button" formnovalidate onclick="document.getElementById('pasajero').style.display = 'block'; document.getElementById('seleccionar-tipo-cliente').style.display = 'none'">Pasajero</button>
+            <button class="button" formnovalidate onclick="document.getElementById('conductor').style.display = 'block'; document.getElementById('seleccionar-tipo-cliente').style.display = 'none'">Conductor</button>
+        </div>
+        <br><br>
+        <div class="volver">
+            <button class="button" formnovalidate onclick="document.getElementById('seleccionar-tipo-cliente').style.display = 'none'; document.getElementById('iniciar-sesion').style.display = 'block'">Volver</button>
+        </div>
+    </div>
 
-.formulario-calificacion label {
-  display: block;
-  margin: 10px 0 5px;
-}
+    <!-- Pasajero -->
+    <div class="container" id="pasajero" style="display: none;">
+        <h2>Selecciona señor pasajero</h2>
+        <div class="selection-buttons">
+            <button>Iniciar pedido</button>
+            <button>Restaurar pedido</button>
+            <button>Consultar pedido</button>
+            <button>Cancelar pedido</button>
+            <div class="volver">
+                <button formnovalidate onclick="document.getElementById('pasajero').style.display = 'none'; document.getElementById('seleccionar-tipo-cliente').style.display = 'block'">Volver</button>
+            </div>
+        </div>
+    </div>
 
-.formulario-calificacion input,
-.formulario-calificacion textarea,
-.formulario-calificacion select {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  box-sizing: border-box;
-}
+    <!-- Conductor -->
+    <div class="container" id="conductor" style="display: none;">
+        <h2>Sistema de pedidos</h2>
+        <div class="selection-buttons">
+            <button>Aceptar pedido</button>
+            <button>Consultar pedido</button>
+            <button>Cancelar pedido</button>
+            <div class="volver">
+                <button formnovalidate onclick="document.getElementById('conductor').style.display = 'none'; document.getElementById('seleccionar-tipo-cliente').style.display = 'block'">Volver</button>
+            </div>
+        </div>
+    </div>
 
-.formulario-calificacion button {
-  width: 100%;
-  padding: 10px;
-  background-color: #ffcc00;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 18px;
-  transition: background-color 0.3s ease-in-out;
-}
+    <div class="container" id="calificacion1" style="display: none;">
+        <form class="formulario-calificacion" action="submit_calificacion_servicio" method="POST" target="_blank">
+            <h2>Calificacion de Servicio</h2>
+            <label for="nombre_servicio">Nombre:</label>
+            <input type="text" id="nombre_servicio" name="nombre_servicio" required>
+            <label for="email_servicio">Correo Electronico:</label>
+            <input type="email" id="email_servicio" name="email_servicio" required>
+            <label for="comentarios_servicio">Comentarios:</label>
+            <textarea id="comentarios_servicio" name="comentarios_servicio" rows="4" required></textarea>
+            <label for="calificacion_servicio">Calificacion:</label>
+            <input type="range" id="calificacion_servicio" name="calificacion_servicio" min="1" max="10" required>
+            <button type="submit">Enviar</button>
+            <div class="volver">
+                <button type="button" formnovalidate onclick="document.getElementById('calificacion1').style.display = 'none'; document.getElementById('inicio').style.display = 'block'">Volver</button>
+            </div>
+        </form>
+    </div>
 
-.formulario-calificacion button:hover {
-  background-color: #e6b800;
-}
+    <div class="container" id="calificacion2" style="display: none;">
+        <form class="formulario-calificacion" action="submit_calificacion_conductor" method="POST" target="_blank">
+            <h2>Calificacion de Conductor</h2>
+            <label for="nombre_conductor">Nombre del Conductor:</label>
+            <input type="text" id="nombre_conductor" name="nombre_conductor" required>
+            <label for="email_conductor">Correo Electronico:</label>
+            <input type="email" id="email_conductor" name="email_conductor" required>
+            <label for="comentarios_conductor">Comentarios:</label>
+            <textarea id="comentarios_conductor" name="comentarios_conductor" rows="4" required></textarea>
+            <label for="calificacion_conductor">Calificacion:</label>
+            <select id="calificacion_conductor" name="calificacion_conductor" required>
+                <option value="excelente">Excelente</option>
+                <option value="bueno">Bueno</option>
+                <option value="regular">Regular</option>
+                <option value="malo">Malo</option>
+            </select>
+            <button type="submit">Enviar</button>
+        </form>
+        <div class="volver">
+            <button type="button" formnovalidate onclick="document.getElementById('calificacion2').style.display = 'none'; document.getElementById('inicio').style.display = 'block'">Volver</button>
+        </div>
+    </div>
 
-.navidad-container {
-  background-image: url('https://4kwallpapers.com/images/walls/thumbs_3t/1018.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  width: 100vw;
-  height: 100vh;
-  color: white; 
-  text-align: center;
-  padding-top: 50px;
-  display: none; 
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1000; 
-  transition: opacity 1s ease-in-out;
-}
-
-.navidad-container:target {
-  display: block;
-  opacity: 1;
-}
-
-
-.navidad-container h2 {
-  color: white;
-  animation: fullColorChange 1s infinite; 
-  font-size: 2.5em; 
-}
-
-
-.navidad-container .navidad-texto {
-  color: white;
-  animation: fullColorChange 1s infinite; 
-  font-size: 1.2em; 
-  margin: 20px 0; 
-}
-
-
-.navidad-button {
-  background-color: #ff0000;
-  color: #fff;
-  padding: 10px 20px;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
-  font-size: 16px;
-  text-decoration: none;
-  display: inline-block;
-  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
-}
-
-.navidad-button:hover {
-  background-color: #cc0000;
-  transform: scale(1.05);
-}
-
-body {
-  margin: 0;
-  overflow: hidden; 
-  background-color: #000; 
-}
-
-.snowflake {
-  position: absolute;
-  top: -10%; 
-  width: 10px; 
-  height: 10px; 
-  background-color: white; 
-  border-radius: 50%; 
-  opacity: 0.8; 
-  animation: fall 10s linear infinite; 
-}
-
-@keyframes fall {
-  to {
-      transform: translateY(100vh); 
-  }
-}
-
-
-.snowflake:nth-child(1) { left: 10%; animation-delay: 0s; }
-.snowflake:nth-child(2) { left: 20%; animation-delay: 0.2s; }
-.snowflake:nth-child(3) { left: 30%; animation-delay: 0.4s; }
-.snowflake:nth-child(4) { left: 40%; animation-delay: 0.6s; }
-.snowflake:nth-child(5) { left: 50%; animation-delay: 0.8s; }
-.snowflake:nth-child(6) { left: 60%; animation-delay: 1s; }
-.snowflake:nth-child(7) { left: 70%; animation-delay: 1.2s; }
-.snowflake:nth-child(8) { left: 80%; animation-delay: 1.4s; }
-.snowflake:nth-child(9) { left: 90%; animation-delay: 1.6s; }
-.snowflake:nth-child(10) { left: 25%; animation-delay: 1.8s; }
-.snowflake:nth-child(11) { left: 15%; animation-delay: 2s; }
-.snowflake:nth-child(12) { left: 35%; animation-delay: 2.2s; }
-.snowflake:nth-child(13) { left: 5%; animation-delay: 2.4s; }
-.snowflake:nth-child(14) { left: 12%; animation-delay: 2.6s; }
-.snowflake:nth-child(15) { left: 22%; animation-delay: 2.8s; }
-.snowflake:nth-child(16) { left: 32%; animation-delay: 3s; }
-.snowflake:nth-child(17) { left: 42%; animation-delay: 3.2s; }
-.snowflake:nth-child(18) { left: 52%; animation-delay: 3.4s; }
-.snowflake:nth-child(19) { left: 62%; animation-delay: 3.6s; }
-.snowflake:nth-child(20) { left: 72%; animation-delay: 3.8s; }
-
-@keyframes fullColorChange {
-  0%, 100% { color: white; }
-  10% { color: red; }
-  20% { color: orange; }
-  30% { color: yellow; }
-  40% { color: green; }
-  50% { color: blue; }
-  60% { color: indigo; }
-  70% { color: violet; }
-  80% { color: pink; }
-  90% { color: gold; }
-}
+    <div class="container" id="calificacion3" style="display: none;">
+        <form class="formulario-calificacion" action="submit_calificacion_aplicacion" method="POST" target="_blank">
+            <h2>Calificacion de la Aplicacion</h2>
+            <label for="nombre_aplicacion">Nombre:</label>
+            <input type="text" id="nombre_aplicacion" name="nombre_aplicacion" required>
+            <label for="email_aplicacion">Correo Electronico:</label>
+            <input type="email" id="email_aplicacion" name="email_aplicacion" required>
+            <label for="comentarios_aplicacion">Comentarios:</label>
+            <textarea id="comentarios_aplicacion" name="comentarios_aplicacion" rows="4" required></textarea>
+            <label for="satisfaccion_aplicacion">Satisfaccion:</label>
+            <meter id="satisfaccion_aplicacion" name="satisfaccion_aplicacion" min="0" max="100" value="75"></meter>
+            <button type="submit">Enviar</button>
+            <div class="volver">
+                <button type="button" formnovalidate onclick="document.getElementById('calificacion3').style.display = 'none'; document.getElementById('inicio').style.display = 'block'">Volver</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
