@@ -7,8 +7,8 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  transition: background-color 0.3s ease-in-out;
 }
-
 
 .contenedor {
   width: 400px;
@@ -19,37 +19,54 @@ body {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
+  transition: transform 0.3s ease-in-out;
 }
 
+.contenedor:hover {
+  transform: scale(1.05);
+}
 
 h2 {
   text-align: center;
   margin-bottom: 20px;
+  transition: color 0.3s ease-in-out;
 }
 
+h2:hover {
+  color: #ff9900;
+}
+
+p {
+  text-align: center;
+  color: #333;
+}
 
 .grupo-de-formulario {
   display: flex;
   flex-direction: column;
-  margin-bottom: 15px;
+  gap: 10px;
 }
 
-.grupo-de-formulario {
-  margin-bottom: 5px;
-}
-
-
-input[type="text"],
-input[type="password"],
-input[type="email"],
-input[type="tel"] {
+.grupo-de-formulario input[type="text"],
+.grupo-de-formulario input[type="password"],
+.grupo-de-formulario input[type="email"],
+.grupo-de-formulario input[type="tel"] {
   width: 100%;
   padding: 10px;
-  border: 1px solid #ccc;
+  border: 1px solid #ffff00;
   border-radius: 5px;
   box-sizing: border-box;
+  transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus {
+  border-color: #ff9900;
+  box-shadow: 0 0 5px rgba(255, 153, 0, 0.5);
+  outline: none;
+}
 
 button {
   display: block;
@@ -61,8 +78,16 @@ button {
   margin-bottom: 15px;
   cursor: pointer;
   font-size: 18px;
+  transition: background-color 0.3s ease-in-out;
 }
 
+button:hover {
+  background-color: #e6b800;
+}
+
+button:active {
+  background-color: #cc9900;
+}
 
 .grupo-de-botones {
   display: flex;
@@ -71,9 +96,6 @@ button {
 
 .botones-de-seleccion {
   margin-bottom: 20px;
-}
-
-.botones-de-seleccion  {
   width: 100%;
   background-color: #FFCC00;
   color: #000000;
@@ -82,12 +104,12 @@ button {
   margin: 10px;
   border-radius: 5px;
   cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
 }
 
-.botones-de-seleccion  {
-  background-color: #F7CC00;
+.botones-de-seleccion:hover {
+  background-color: #e6b800;
 }
-
 
 .volver {
   color: #000000;
@@ -100,11 +122,168 @@ button {
 }
 
 .volver:hover {
-  background-color: #F7CC00;
+  background-color: #e6b800;
 }
 
-@media screen and (max-width: 660px) {
-  body {
-    background-image: url('https://img.freepik.com/vector-premium/tarjeta-visita-servicio-taxi-espacio-blanco-inscripciones-numero-telefono_711966-700.jpg/600x301');
+
+.formulario-calificacion {
+  background-color: #ffff00;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.formulario-calificacion:hover {
+  background-color: #ffff00;
+}
+
+.formulario-calificacion h2 {
+  text-align: center;
+}
+
+.formulario-calificacion label {
+  display: block;
+  margin: 10px 0 5px;
+}
+
+.formulario-calificacion input,
+.formulario-calificacion textarea,
+.formulario-calificacion select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.formulario-calificacion button {
+  width: 100%;
+  padding: 10px;
+  background-color: #ffcc00;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.formulario-calificacion button:hover {
+  background-color: #e6b800;
+}
+
+.navidad-container {
+  background-image: url('https://4kwallpapers.com/images/walls/thumbs_3t/1018.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+  color: white; 
+  text-align: center;
+  padding-top: 50px;
+  display: none; 
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000; 
+  transition: opacity 1s ease-in-out;
+}
+
+.navidad-container:target {
+  display: block;
+  opacity: 1;
+}
+
+
+.navidad-container h2 {
+  color: white;
+  animation: fullColorChange 1s infinite; 
+  font-size: 2.5em; 
+}
+
+
+.navidad-container .navidad-texto {
+  color: white;
+  animation: fullColorChange 1s infinite; 
+  font-size: 1.2em; 
+  margin: 20px 0; 
+}
+
+
+.navidad-button {
+  background-color: #ff0000;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.navidad-button:hover {
+  background-color: #cc0000;
+  transform: scale(1.05);
+}
+
+body {
+  margin: 0;
+  overflow: hidden; 
+  background-color: #000; 
+}
+
+.snowflake {
+  position: absolute;
+  top: -10%; 
+  width: 10px; 
+  height: 10px; 
+  background-color: white; 
+  border-radius: 50%; 
+  opacity: 0.8; 
+  animation: fall 10s linear infinite; 
+}
+
+@keyframes fall {
+  to {
+      transform: translateY(100vh); 
   }
+}
+
+
+.snowflake:nth-child(1) { left: 10%; animation-delay: 0s; }
+.snowflake:nth-child(2) { left: 20%; animation-delay: 0.2s; }
+.snowflake:nth-child(3) { left: 30%; animation-delay: 0.4s; }
+.snowflake:nth-child(4) { left: 40%; animation-delay: 0.6s; }
+.snowflake:nth-child(5) { left: 50%; animation-delay: 0.8s; }
+.snowflake:nth-child(6) { left: 60%; animation-delay: 1s; }
+.snowflake:nth-child(7) { left: 70%; animation-delay: 1.2s; }
+.snowflake:nth-child(8) { left: 80%; animation-delay: 1.4s; }
+.snowflake:nth-child(9) { left: 90%; animation-delay: 1.6s; }
+.snowflake:nth-child(10) { left: 25%; animation-delay: 1.8s; }
+.snowflake:nth-child(11) { left: 15%; animation-delay: 2s; }
+.snowflake:nth-child(12) { left: 35%; animation-delay: 2.2s; }
+.snowflake:nth-child(13) { left: 5%; animation-delay: 2.4s; }
+.snowflake:nth-child(14) { left: 12%; animation-delay: 2.6s; }
+.snowflake:nth-child(15) { left: 22%; animation-delay: 2.8s; }
+.snowflake:nth-child(16) { left: 32%; animation-delay: 3s; }
+.snowflake:nth-child(17) { left: 42%; animation-delay: 3.2s; }
+.snowflake:nth-child(18) { left: 52%; animation-delay: 3.4s; }
+.snowflake:nth-child(19) { left: 62%; animation-delay: 3.6s; }
+.snowflake:nth-child(20) { left: 72%; animation-delay: 3.8s; }
+
+@keyframes fullColorChange {
+  0%, 100% { color: white; }
+  10% { color: red; }
+  20% { color: orange; }
+  30% { color: yellow; }
+  40% { color: green; }
+  50% { color: blue; }
+  60% { color: indigo; }
+  70% { color: violet; }
+  80% { color: pink; }
+  90% { color: gold; }
 }
