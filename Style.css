@@ -287,3 +287,96 @@ body {
   80% { color: pink; }
   90% { color: gold; }
 }
+
+.halloween-container {
+  background-image: url('https://img.freepik.com/foto-gratis/escena-halloween-calabazas-malvadas_1409-5229.jpg?t=st=1728776343~exp=1728779943~hmac=e274fb66cb6beb3fa07749e7c1f55057662d56848131ec8a78069eed6f3aaa20&w=826');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+  color: white; 
+  text-align: center;
+  padding-top: 50px;
+  display: none; 
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000; 
+  transition: opacity 1s ease-in-out;
+}
+
+.halloween-container:target {
+  display: block;
+  opacity: 1;
+}
+
+
+.halloween-container h2 {
+  color: white;
+  animation: fullColorChange 1s infinite; 
+  font-size: 2.5em; 
+}
+
+
+.halloween-container .halloween-texto {
+  color: white;
+  animation: fullColorChange 1s infinite; 
+  font-size: 1.2em; 
+  margin: 20px 0; 
+}
+
+body {
+  margin: 0;
+  overflow: hidden; 
+  background-color: #000; 
+}
+
+.background-moving {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('https://media.istockphoto.com/id/1341515382/photo/fog-in-black-smoke-and-mist-on-wooden-table-halloween-backdrop.jpg?s=1024x1024&w=is&k=20&c=OsTlM8znShNZ29VhFbpAeHHQQTvugZS_rYBEivUtTes=');
+  background-size: cover;
+  background-position: center;
+  filter: blur(10px); /* Difuminado */
+  opacity: 0.9; /* Transparencia */
+  z-index: 2; /* Delante del fondo estático pero detrás del contenido */
+  transition: transform 3s ease-in-out, opacity 2s ease-in-out; /* Transiciones suaves */
+}
+
+/* Movimiento del segundo fondo con hover */
+.background-moving:hover {
+  transform: scale(1.1) translateX(50px) rotate(5deg); /* Movimiento suave */
+  opacity: 0.5; /* Se vuelve más visible */
+}
+
+/* Contenido del sitio */
+.content {
+  position: relative;
+  z-index: 3; /* Frente a ambos fondos */
+  text-align: center;
+  color: white;
+  margin-top: 20%;
+}
+
+@keyframes fall {
+  to {
+      transform: translateY(100vh); 
+  }
+}
+
+@keyframes fullColorChange {
+  0%, 100% { color: white; }
+  10% { color: red; }
+  20% { color: orange; }
+  30% { color: yellow; }
+  40% { color: green; }
+  50% { color: blue; }
+  60% { color: indigo; }
+  70% { color: violet; }
+  80% { color: pink; }
+  90% { color: gold; }
+}
